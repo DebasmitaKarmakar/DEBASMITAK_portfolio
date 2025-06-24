@@ -1,1 +1,116 @@
-PLACEHOLDER FOR DEBASMITA ENHANCED PORTFOLIO HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debasmita Karmakar | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Debasmita Karmakar</h1>
+      <h2><span id="typing-text">Cybersecurity | Quantum | ML | Artistic Soul</span></h2>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/debasmitakarmakar" target="_blank">LinkedIn</a>
+        <a href="https://github.com/DebasmitaKarmakar" target="_blank">GitHub</a>
+        <a href="https://instagram.com/oh.rim._" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#workshops">Workshops</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>A tech enthusiast hailing from Tripura, India, I’m someone who thrives at the intersection of creativity and technology. Currently pursuing an integrated BTech-MTech in Computer Science and Engineering (Cybersecurity) at the National Forensic Sciences University – Tripura Campus, I’m deeply passionate about programming, aerospace, artificial intelligence, machine learning, and cybersecurity.</p>
+    <p>My curiosity constantly drives me to explore new domains, with a special interest in quantum computing. Whether it's writing code, reading thought-provoking content, or expressing myself through art and amateur writing—I find joy in both logic and creativity. Music and painting are close to my heart, keeping me grounded and inspired.</p>
+    <p>I believe in living life fully and mindfully, embracing each moment with purpose. Independence and continuous learning are values I hold close, always striving to grow, create, and contribute in meaningful ways.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">Python</div>
+    <div class="card">C/C++</div>
+    <div class="card">OpenCV</div>
+    <div class="card">LaTeX</div>
+    <div class="card">Raspberry Pi</div>
+    <div class="card">DeepFace</div>
+    <div class="card">Communication</div>
+    <div class="card">Event Management</div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Hexacopter Drone for Surveillance</h3>
+      <p>Designed for defense surveillance, data collection, and research.</p>
+      <p><strong>Tech:</strong> Python, Radiolink</p>
+    </div>
+    <div class="project-card">
+      <h3>Visual Inference & ML on Drone Images</h3>
+      <p>AI-based image analysis with DeepFace for forensic applications.</p>
+      <p><strong>Tech:</strong> Python, Linux, OpenCV, Raspberry Pi</p>
+    </div>
+  </section>
+
+  <section id="workshops">
+    <h2>Workshops & Certifications</h2>
+    <ul>
+      <li>Quantum Computing Workshop – QBronze160</li>
+      <li>AI for Good Governance – MeitY & Govt. of Tripura</li>
+      <li>IBM Qiskit Fall Fest – NIT Agartala</li>
+      <li>Cybersecurity – NFSU Tripura</li>
+      <li>Drone AI Workshop – NIT Agartala</li>
+      <li>1-Month Quantum Workshop – MeitY, C-DAC, IIT Roorkee</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Let’s Connect</h2>
+    <p>Let’s build bridges between minds. If something here sparked your interest — don’t hesitate to say hello.</p>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <a href="DebasmitaCV.pdf" class="button" download>Download Resume</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Debasmita Karmakar</p>
+  </footer>
+
+  <script>
+    const text = ["Cybersecurity", "Quantum", "ML", "Artistic Soul"];
+    let i = 0, j = 0, isDeleting = false, current = "";
+    const typingElement = document.getElementById("typing-text");
+
+    function type() {
+      current = text[i];
+      let display = isDeleting ? current.substring(0, j--) : current.substring(0, j++);
+      typingElement.innerHTML = display + (j % 2 ? "|" : " ");
+      if (!isDeleting && j === current.length) {
+        isDeleting = true;
+        setTimeout(type, 1000);
+      } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % text.length;
+        setTimeout(type, 500);
+      } else {
+        setTimeout(type, 100);
+      }
+    }
+    type();
+  </script>
+</body>
+</html>
