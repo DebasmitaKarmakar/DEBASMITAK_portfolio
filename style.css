@@ -1,1 +1,81 @@
-PLACEHOLDER FOR DEBASMITA ENHANCED PORTFOLIO CSS
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #0a0f1d, #1a2c38);
+  color: #f0f4ff;
+}
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: url('https://images.unsplash.com/photo-1534759846116-c6946c7d94c5?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero-content h2 {
+  font-size: 1.2rem;
+  color: #a0e7ff;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #101f33;
+}
+.navbar a {
+  color: #a0dfff;
+  text-decoration: none;
+  font-weight: bold;
+}
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+h2 {
+  font-size: 1.6rem;
+  color: #4ecdc4;
+  margin-bottom: 1rem;
+}
+.card, .project-card, ul li {
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input, form textarea {
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #172a3a;
+  color: #fff;
+}
+form button {
+  background: #38bdf8;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+.button {
+  background: #38bdf8;
+  color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+}
+footer {
+  text-align: center;
+  background: #0a0f1d;
+  color: #aaa;
+  padding: 20px;
+}
